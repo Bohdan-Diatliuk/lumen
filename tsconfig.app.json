@@ -5,6 +5,13 @@
     "types": ["vite/client"],
     "allowArbitraryExtensions": true,
 
+    /* The library ships raw .vue sources instead of generated types, and those
+       sources don't type-check. Point TS at a local stub so it never pulls them
+       into the program; Vite still resolves the real package at build time. */
+    "paths": {
+      "@zaosoula/liquid-glass-vue/components": ["./src/types/liquid-glass.d.ts"]
+    },
+
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
