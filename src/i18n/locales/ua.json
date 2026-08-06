@@ -1,0 +1,164 @@
+{
+  "navbar": {
+    "product": "Продукт",
+    "features": "Особливості",
+    "pricing": "Ціни",
+    "customers": "Клієнти",
+    "resources": "Ресурси",
+    "login": "Увійти",
+    "startFreeTrial": "Почати безкоштовну пробну версію"
+  },
+  "main": {
+    "title": "Перетворюйте необроблені дані на рішення за секунди, а не тижні",
+    "description": "Припиніть чекати на панелі керування. Познайомтеся з вашим новим AI-агентом, який миттєво аналізує, запитує та звітує про ваші бізнес-дані за допомогою природної мови."
+  },
+  "dataTeam": {
+    "title": "Команди даних тонуть у панелях керування, які ніхто не читає",
+    "mainText": "Ви витрачаєте години на створення складних панелей керування, але менеджмент продовжує задавати ті самі ад-hoc запитання в Slack. Беклог зростає, аналітика затримується, а цінні інженери даних залишаються блокованими на рутинних завданнях звітування замість стратегічної роботи."
+  },
+  "cards": {
+    "title": "Все, що вам потрібно для швидшого руху",
+    "subTitle": "Повний набір інструментів для сучасного даних-драйвеного бізнесу.",
+    "language": {
+      "title": "Природна мова запитів",
+      "description": "Задавайте складні бізнес-питання простим англійським і отримуйте миттєві, точні діаграми та аналітика."
+    },
+    "reports": {
+      "title": "",
+      "description": ""
+    },
+    "anomaly": {
+      "title": "",
+      "description": ""
+    },
+    "integrations": {
+      "title": "",
+      "description": ""
+    },
+    "sync": {
+      "title": "",
+      "description": ""
+    },
+    "security": {
+      "title": "",
+      "description": ""
+    }
+  },
+  "lumenAnswer": {
+    "title": "",
+    "description": "",
+    "list": {
+      "item1": "",
+      "item2": "",
+      "item3": ""
+    }
+  },
+  "reports": {
+    "title": "",
+    "description": "",
+    "text": "",
+    "btn": ""
+  },
+  "howItWorks": {
+    "title": "",
+    "table": {
+      "firstColumn": {
+        "title": "",
+        "description": ""
+      },
+      "secondColumn": {
+        "title": "",
+        "description": ""
+      },
+      "thirdColumn": {
+        "title": "",
+        "description": ""
+      },
+      "fourthColumn": {
+        "title": "",
+        "description": ""
+      }
+    }
+  },
+  "data": {
+    "teams": "Команд",
+    "answer": "",
+    "save": "",
+    "sla": ""
+  },
+  "comments": {
+    "title": "",
+    "user1": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    },
+    "user2": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    },
+    "user3": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    },
+    "user4": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    },
+    "user5": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    }
+  },
+  "price": {
+    "title": "",
+    "subTitle": "",
+    "startCard": {
+      "title": "",
+      "price": "",
+      "month": "",
+      "description": "",
+      "list": {
+        "item1": "",
+        "item2": "",
+        "item3": "",
+        "item4": ""
+      }
+    },
+    "proCard": {
+      "title": "",
+      "price": "",
+      "month": "",
+      "description": "",
+      "list": {
+        "item1": "",
+        "item2": "",
+        "item3": "",
+        "item4": "",
+        "item5": ""
+      }
+    },
+    "customCard": {
+      "title": "",
+      "price": "",
+      "month": "",
+      "description": "",
+      "list": {
+        "item1": "",
+        "item2": "",
+        "item3": "",
+        "item4": "",
+        "item5": ""
+      }
+    }
+  }
+}

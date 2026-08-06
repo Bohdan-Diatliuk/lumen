@@ -1,0 +1,165 @@
+{
+  "navbar": {
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "customers": "Customers",
+    "resources": "Resources",
+    "login": "Log in",
+    "startFreeTrial": "Start Free Trial"
+  },
+  "main": {
+    "title": "Turn raw data into decisions in seconds, not weeks",
+    "description": "Stop waiting on dashboards. Meet your new AI agent that instantly analyzes, queries, and reports on your business data using natural language."
+  },
+  "dataTeam": {
+    "title": "Data teams are drowning in dashboards nobody reads",
+    "mainText": "You spend hours building complex dashboards, only for stakeholders to ask the same ad-hoc questions on Slack. The backlog grows, insights are delayed, and valuable data engineers are stuck doing repetitive reporting tasks instead of strategic work.",
+    "footerText": "It's time for a fundamental shift in how organizations interact with their data."
+  },
+  "cards": {
+    "title": "Everything you need to move faster",
+    "subTitle": "A complete toolkit for the modern data-driven enterprise.",
+    "language": {
+      "title": "Natural Language Queries",
+      "description": "Ask complex business questions in plain English and get instant, accurate charts and insights."
+    },
+    "reports": {
+      "title": "Auto-Generated Reports",
+      "description": "Schedule comprehensive performance reports that write themselves and deliver straight to Slack."
+    },
+    "anomaly": {
+      "title": "Anomaly Detection",
+      "description": "AI automatically flags statistically significant deviations in your KPIs before you even ask."
+    },
+    "integrations": {
+      "title": "50+ Integrations",
+      "description": "Connect securely to Snowflake, BigQuery, PostgreSQL, Salesforce, and all your critical data sources."
+    },
+    "sync": {
+      "title": "Real-Time Sync",
+      "description": "Your AI agent always has the latest context. No stale data, no delayed insights."
+    },
+    "security": {
+      "title": "Enterprise Security",
+      "description": "SOC2 compliant, row-level security, and strict data governance policies built-in by default."
+    }
+  },
+  "lumenAnswer": {
+    "title": "Just ask. Lumen answers.",
+    "description": "Democratize data access across your organization. Anyone can ask complex questions and get boardroom-ready visualizations instantly.",
+    "list": {
+      "item1": "Translates plain English to complex SQL instantly",
+      "item2": "Automatically selects the best chart type for your data",
+      "item3": "Provides statistical context and key takeaways with every answer."
+    }
+  },
+  "reports": {
+    "title": "Reports that write themselves",
+    "description": "Stop manually compiling weekly updates. Lumen analyzes your metrics, writes executive summaries, and delivers comprehensive reports directly to your team's Slack channels.",
+    "text": "Keep everyone aligned without lifting a finger, ensuring stakeholders always have the context they need to make decisions.",
+    "btn": "Explore Integrations"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "table": {
+      "firstColumn": {
+        "title": "Connect",
+        "description": "Securely hook up your data warehouse in minutes."
+      },
+      "secondColumn": {
+        "title": "Analyze",
+        "description": "Lumen learns your schema and business logic automatically."
+      },
+      "thirdColumn": {
+        "title": "Discover",
+        "description": "Ask questions naturally and get instant visualizations."
+      },
+      "fourthColumn": {
+        "title": "Act",
+        "description": "Make confident decisions based on real-time insights."
+      }
+    }
+  },
+  "data": {
+    "teams": "Teams",
+    "answer": "Queries Answered",
+    "save": "Saved Per Week",
+    "sla": "Uptime SLA"
+  },
+  "comments": {
+    "title": "Don't just take our word for it",
+    "user1": {
+      "fullName": "Sarah Jenkins",
+      "position": "VP of Operations",
+      "company": "TechCorp",
+      "comment": "Lumen has completely changed how our executive team operates. We no longer wait until Monday for reports; we just ask Lumen on Friday afternoon and get answers instantly."
+    },
+    "user2": {
+      "fullName": "Marcus Chen",
+      "position": "Lead Data Engineer",
+      "company": "ScaleUp",
+      "comment": "As a data engineer, I used to spend 60% of my week pulling ad-hoc CSVs. Now, stakeholders self-serve through Lumen, and I can focus on building our core infrastructure."
+    },
+    "user3": {
+      "fullName": "David Alpert",
+      "position": "Head of Growth",
+      "company": "FinStream",
+      "comment": "The automated anomaly detection caught a billing issue a week before our standard reporting would have noticed it. It practically paid for itself in one day."
+    },
+    "user4": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    },
+    "user5": {
+      "fullName": "",
+      "position": "",
+      "company": "",
+      "comment": ""
+    }
+  },
+  "price": {
+    "title": "Simple, transparent pricing",
+    "subTitle": "Start for free, scale as you grow.",
+    "startCard": {
+        "title": "Starter",
+        "price": "$49",
+        "month": "mo",
+        "description": "Perfect for small teams getting started with AI analytics.",
+        "list": {
+            "item1": "Up to 5 users",
+            "item2": "1,000 queries/month",
+            "item3": "Basic integrations",
+            "item4": "Standard support"
+        }
+    },
+    "proCard": {
+        "title": "Pro",
+        "price": "$199",
+        "month": "mo",
+        "description": "Everything growing data teams need for daily insights.",
+        "list": {
+            "item1": "Up to 20 users",
+            "item2": "Unlimited queries",
+            "item3": "Advanced integrations",
+            "item4": "Priority support",
+            "item5": "Slack integration"
+        }
+    },
+    "customCard": {
+        "title": "Enterprise",
+        "price": "Custom",
+        "month": "",
+        "description": "Tailored solutions for large organizations with complex needs.",
+        "list": {
+            "item1": "Unlimited users",
+            "item2": "Unlimited queries",
+            "item3": "Custom integrations",
+            "item4": "24/7 dedicated support",
+            "item5": "SOC2 & SSO"
+        }
+    }
+  }
+}
