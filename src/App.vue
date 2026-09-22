@@ -4,6 +4,7 @@ import GlassCircles from './components/ui/GlassCircles.vue';
 import bgImage from './assets/bg/screen.png';
 import bgData from './assets/bg/data.png';
 import GlassSearch from './components/ui/GlassSearch.vue';
+import DataTeamSection from './components/sections/DataTeamSection.vue';
 </script>
 
 <template>
@@ -21,5 +22,6 @@ import GlassSearch from './components/ui/GlassSearch.vue';
       <img :src="bgData" alt="data" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
     </section>
     <GlassSearch />
+    <DataTeamSection />
   </div>
 </template>
