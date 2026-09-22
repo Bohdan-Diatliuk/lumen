@@ -3,6 +3,7 @@ import Navbar from './layout/Navbar.vue';
 import GlassCircles from './components/ui/GlassCircles.vue';
 import bgImage from './assets/bg/screen.png';
 import bgData from './assets/bg/data.png';
+import GlassSearch from './components/ui/GlassSearch.vue';
 </script>
 
 <template>
@@ -19,5 +20,6 @@ import bgData from './assets/bg/data.png';
       :style="{ transform: 'perspective(1200px) rotateX(8deg)' }">
       <img :src="bgData" alt="data" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
     </section>
+    <GlassSearch />
   </div>
 </template>
