@@ -19,8 +19,5 @@ import bgData from './assets/bg/data.png';
       :style="{ transform: 'perspective(1200px) rotateX(8deg)' }">
       <img :src="bgData" alt="data" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
     </section>
-    <section class="flex justify-center mb-2">
-        <h1 class="text-2xl">Hello zed</h1>
-    </section>
   </div>
 </template>
