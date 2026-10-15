@@ -18,7 +18,7 @@ import Footer from './layout/Footer.vue';
 </script>
 
 <template>
-  <div class="overflow-hidden">
+  <div id="top" class="overflow-hidden">
     <section class="relative min-h-screen">
       <div class="absolute inset-0 -z-10 bg-cover bg-center" :style="{ backgroundImage: `url(${bgImage})` }">
       </div>
