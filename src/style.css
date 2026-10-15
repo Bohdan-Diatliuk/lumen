@@ -9,3 +9,11 @@ body {
   min-height: 100svh;
   background: #171725;
 }
+
+@utility glass {
+  border: 1px solid rgb(255 255 255 / 0.07);
+  background-color: rgb(255 255 255 / 0.02);
+  background-clip: padding-box;
+  backdrop-filter: blur(6px);
+  box-shadow: 2px 8px 32px 0 rgb(0 0 0 / 0.3);
+}

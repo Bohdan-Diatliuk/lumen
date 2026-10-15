@@ -161,5 +161,54 @@
             "item5": "SOC2 & SSO"
         }
     }
+  },
+  "hero": {
+    "badge": "Trusted by 12,000+ data teams",
+    "cta": "Start Free Trial",
+    "demo": "Watch Demo",
+    "note": "No credit card required · 14-day free trial"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "How secure is my data?", "a": "We employ enterprise-grade encryption (AES-256) at rest and in transit. We are SOC2 Type II compliant and offer strict data localization options. Lumen never trains public models on your proprietary data." },
+      { "q": "Which databases do you support?", "a": "We currently support Snowflake, BigQuery, Amazon Redshift, PostgreSQL, MySQL, and over 40 other popular data warehouses and SaaS applications." },
+      { "q": "Do I need technical skills to use Lumen?", "a": "Not at all. Lumen is designed for business users to ask questions in plain English. Setup takes minutes and requires minimal input from your data engineering team." },
+      { "q": "Can it handle complex, custom metrics?", "a": "Yes. During the connection phase, Lumen reads your schema and metadata. You can also manually define complex business logic or unique metrics in our semantic layer." },
+      { "q": "How does the Slack integration work?", "a": "You can tag @Lumen in any channel to ask questions, or schedule automated recurring reports to be delivered to specific channels or direct messages at a cadence you choose." },
+      { "q": "Is there a free trial?", "a": "Yes, we offer a 14-day free trial on our Pro plan with no credit card required. You can connect your data and start getting insights immediately." }
+    ]
+  },
+  "cta": {
+    "title": "Ready to see your data clearly?",
+    "subTitle": "Join 12,000+ teams making faster, smarter decisions with Lumen AI.",
+    "placeholder": "Enter your work email",
+    "button": "Start Free Trial",
+    "note": "14-day free trial. Cancel anytime."
+  },
+  "pricingExtra": {
+    "popular": "MOST POPULAR",
+    "start": "Start Free Trial",
+    "contact": "Contact Sales"
+  },
+  "footer": {
+    "tagline": "AI-driven analytics that move as fast as your business.",
+    "product": "Product",
+    "features": "Features",
+    "integrations": "Integrations",
+    "pricing": "Pricing",
+    "changelog": "Changelog",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "contact": "Contact",
+    "subscribe": "Subscribe",
+    "subscribeText": "Get the latest news and updates delivered to your inbox.",
+    "email": "Email address",
+    "rights": "© 2024 Lumen AI. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings"
   }
 }
