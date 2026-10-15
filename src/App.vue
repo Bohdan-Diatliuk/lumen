@@ -32,15 +32,15 @@ import Footer from './layout/Footer.vue';
       <img :src="bgData" alt="data" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
     </section>
     <GlassSearch />
-    <DataTeamSection />
-    <CardSection />
+    <DataTeamSection id="product" />
+    <CardSection id="features" />
     <LumenAnswerSection />
     <ReportsSection />
     <HowItWorksSection />
     <StatsSection />
-    <TestimonialsSection />
-    <PricingSection />
-    <FaqSection />
+    <TestimonialsSection id="customers" />
+    <PricingSection id="pricing" />
+    <FaqSection id="resources" />
     <CtaSection />
     <Footer />
   </div>

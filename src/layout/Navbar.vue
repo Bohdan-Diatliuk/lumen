@@ -17,7 +17,7 @@ const langs = [
 
             <ul class="hidden md:flex items-center gap-8">
                 <li v-for="link in links" :key="link">
-                    <a href="#"
+                    <a :href="`#${link}`"
                         class="text-sm font-medium uppercase tracking-wide text-white/80 hover:text-white transition-colors duration-300">
                         {{ t(`navbar.${link}`) }}
                     </a>
