@@ -6,7 +6,9 @@
     "customers": "Customers",
     "resources": "Resources",
     "login": "Log in",
-    "startFreeTrial": "Start Free Trial"
+    "startFreeTrial": "Start Free Trial",
+    "langEn": "ENG",
+    "langUa": "UKR"
   },
   "main": {
     "title": "Turn raw data into decisions in seconds, not weeks",
@@ -124,59 +126,71 @@
     "title": "Simple, transparent pricing",
     "subTitle": "Start for free, scale as you grow.",
     "startCard": {
-        "title": "Starter",
-        "price": "$49",
-        "month": "mo",
-        "description": "Perfect for small teams getting started with AI analytics.",
-        "list": {
-            "item1": "Up to 5 users",
-            "item2": "1,000 queries/month",
-            "item3": "Basic integrations",
-            "item4": "Standard support"
-        }
+      "title": "Starter",
+      "price": "$49",
+      "month": "mo",
+      "description": "Perfect for small teams getting started with AI analytics.",
+      "list": {
+        "item1": "Up to 5 users",
+        "item2": "1,000 queries/month",
+        "item3": "Basic integrations",
+        "item4": "Standard support"
+      }
     },
     "proCard": {
-        "title": "Pro",
-        "price": "$199",
-        "month": "mo",
-        "description": "Everything growing data teams need for daily insights.",
-        "list": {
-            "item1": "Up to 20 users",
-            "item2": "Unlimited queries",
-            "item3": "Advanced integrations",
-            "item4": "Priority support",
-            "item5": "Slack integration"
-        }
+      "title": "Pro",
+      "price": "$199",
+      "month": "mo",
+      "description": "Everything growing data teams need for daily insights.",
+      "list": {
+        "item1": "Up to 20 users",
+        "item2": "Unlimited queries",
+        "item3": "Advanced integrations",
+        "item4": "Priority support",
+        "item5": "Slack integration"
+      }
     },
     "customCard": {
-        "title": "Enterprise",
-        "price": "Custom",
-        "month": "",
-        "description": "Tailored solutions for large organizations with complex needs.",
-        "list": {
-            "item1": "Unlimited users",
-            "item2": "Unlimited queries",
-            "item3": "Custom integrations",
-            "item4": "24/7 dedicated support",
-            "item5": "SOC2 & SSO"
-        }
+      "title": "Enterprise",
+      "price": "Custom",
+      "month": "",
+      "description": "Tailored solutions for large organizations with complex needs.",
+      "list": {
+        "item1": "Unlimited users",
+        "item2": "Unlimited queries",
+        "item3": "Custom integrations",
+        "item4": "24/7 dedicated support",
+        "item5": "SOC2 & SSO"
+      }
     }
-  },
-  "hero": {
-    "badge": "Trusted by 12,000+ data teams",
-    "cta": "Start Free Trial",
-    "demo": "Watch Demo",
-    "note": "No credit card required · 14-day free trial"
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "items": [
-      { "q": "How secure is my data?", "a": "We employ enterprise-grade encryption (AES-256) at rest and in transit. We are SOC2 Type II compliant and offer strict data localization options. Lumen never trains public models on your proprietary data." },
-      { "q": "Which databases do you support?", "a": "We currently support Snowflake, BigQuery, Amazon Redshift, PostgreSQL, MySQL, and over 40 other popular data warehouses and SaaS applications." },
-      { "q": "Do I need technical skills to use Lumen?", "a": "Not at all. Lumen is designed for business users to ask questions in plain English. Setup takes minutes and requires minimal input from your data engineering team." },
-      { "q": "Can it handle complex, custom metrics?", "a": "Yes. During the connection phase, Lumen reads your schema and metadata. You can also manually define complex business logic or unique metrics in our semantic layer." },
-      { "q": "How does the Slack integration work?", "a": "You can tag @Lumen in any channel to ask questions, or schedule automated recurring reports to be delivered to specific channels or direct messages at a cadence you choose." },
-      { "q": "Is there a free trial?", "a": "Yes, we offer a 14-day free trial on our Pro plan with no credit card required. You can connect your data and start getting insights immediately." }
+      {
+        "q": "How secure is my data?",
+        "a": "We employ enterprise-grade encryption (AES-256) at rest and in transit. We are SOC2 Type II compliant and offer strict data localization options. Lumen never trains public models on your proprietary data."
+      },
+      {
+        "q": "Which databases do you support?",
+        "a": "We currently support Snowflake, BigQuery, Amazon Redshift, PostgreSQL, MySQL, and over 40 other popular data warehouses and SaaS applications."
+      },
+      {
+        "q": "Do I need technical skills to use Lumen?",
+        "a": "Not at all. Lumen is designed for business users to ask questions in plain English. Setup takes minutes and requires minimal input from your data engineering team."
+      },
+      {
+        "q": "Can it handle complex, custom metrics?",
+        "a": "Yes. During the connection phase, Lumen reads your schema and metadata. You can also manually define complex business logic or unique metrics in our semantic layer."
+      },
+      {
+        "q": "How does the Slack integration work?",
+        "a": "You can tag @Lumen in any channel to ask questions, or schedule automated recurring reports to be delivered to specific channels or direct messages at a cadence you choose."
+      },
+      {
+        "q": "Is there a free trial?",
+        "a": "Yes, we offer a 14-day free trial on our Pro plan with no credit card required. You can connect your data and start getting insights immediately."
+      }
     ]
   },
   "cta": {
@@ -210,5 +224,11 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Settings"
+  },
+  "poweredBy": "Powering data decisions at",
+  "mock": {
+    "question": "Show revenue by region for Q3",
+    "answer": "EMEA grew +18% QoQ, driving most of the quarter's growth.",
+    "report": "Weekly performance report"
   }
 }

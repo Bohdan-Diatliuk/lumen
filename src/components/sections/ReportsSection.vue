@@ -16,7 +16,7 @@ const { t } = useI18n()
                     </div>
                 </div>
                 <div class="rounded-xl bg-white/5 p-4 space-y-2 text-sm text-gray-300">
-                    <div class="font-semibold text-white">Weekly performance report</div>
+                    <div class="font-semibold text-white">{{ t('mock.report') }}</div>
                     <div class="h-2 w-full rounded bg-white/10"></div>
                     <div class="h-2 w-5/6 rounded bg-white/10"></div>
                     <div class="h-2 w-2/3 rounded bg-white/10"></div>

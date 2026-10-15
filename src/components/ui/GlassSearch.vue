@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { Snowflake, Leaf, Droplet, Flame, Wind } from '@lucide/vue';
+const { t } = useI18n();
 </script>
 
 <template>
@@ -8,7 +10,7 @@ import { Snowflake, Leaf, Droplet, Flame, Wind } from '@lucide/vue';
             <div
                 class="rounded-3xl border border-white/7 bg-white/2 bg-clip-padding backdrop-blur-[6px] shadow-[2px_8px_32px_0_rgba(0,0,0,0.3)] p-8 flex flex-col md:flex-row items-center justify-between gap-8">
                 <p class="text-sm font-medium uppercase tracking-wide text-white/60 whitespace-nowrap">
-                    Powering data decisions at
+                    {{ t('poweredBy') }}
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-end items-center gap-12 w-full opacity-60 grayscale">
                     <Snowflake class="w-9 h-9" />
