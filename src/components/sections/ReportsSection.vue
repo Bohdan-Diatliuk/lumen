@@ -7,7 +7,7 @@ const { t } = useI18n()
 <template>
     <section class="max-w-300 mx-auto px-6 md:px-16 py-30">
         <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="glass rounded-3xl p-6 space-y-4 shadow-2xl order-2 md:order-1">
+            <div v-reveal class="glass rounded-3xl p-6 space-y-4 shadow-2xl order-2 md:order-1">
                 <div class="flex items-center gap-3">
                     <div class="w-9 h-9 rounded-lg bg-linear-to-br from-violet-300 to-sky-300"></div>
                     <div>
@@ -22,7 +22,7 @@ const { t } = useI18n()
                     <div class="h-2 w-2/3 rounded bg-white/10"></div>
                 </div>
             </div>
-            <div class="space-y-6 order-1 md:order-2">
+            <div v-reveal="150" class="space-y-6 order-1 md:order-2">
                 <h2 class="text-[2.5rem] font-bold text-white leading-tight">{{ t('reports.title') }}</h2>
                 <p class="text-lg text-gray-300">{{ t('reports.description') }}</p>
                 <p class="text-lg text-gray-300">{{ t('reports.text') }}</p>

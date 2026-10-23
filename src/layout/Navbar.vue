@@ -7,17 +7,22 @@ const langs = [
     { code: 'en', label: 'langEn' },
     { code: 'ua', label: 'langUa' },
 ];
+
+const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView();
+    history.replaceState(null, '', location.pathname + location.search);
+};
 </script>
 
 <template>
     <nav
         class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-48px)] max-w-7xl rounded-full border border-white/7 bg-white/2 bg-clip-padding backdrop-blur-[6px] shadow-[2px_8px_32px_0_rgba(0,0,0,0.3)]">
         <div class="flex items-center justify-between gap-4 px-6 py-3">
-            <a href="#top" class="text-xl font-bold">Lumen</a>
+            <a href="#top" @click.prevent="scrollTo('top')" class="text-xl font-bold">Lumen</a>
 
             <ul class="hidden md:flex items-center gap-8">
                 <li v-for="link in links" :key="link">
-                    <a :href="`#${link}`"
+                    <a :href="`#${link}`" @click.prevent="scrollTo(link)"
                         class="text-sm font-medium uppercase tracking-wide text-white/80 hover:text-white transition-colors duration-300">
                         {{ t(`navbar.${link}`) }}
                     </a>

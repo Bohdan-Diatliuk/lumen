@@ -7,7 +7,7 @@ const { t } = useI18n();
 <template>
     <section class="py-16 relative z-10">
         <div class="max-w-300 mx-auto px-6 md:px-16">
-            <div
+            <div v-reveal
                 class="rounded-3xl border border-white/7 bg-white/2 bg-clip-padding backdrop-blur-[6px] shadow-[2px_8px_32px_0_rgba(0,0,0,0.3)] p-8 flex flex-col md:flex-row items-center justify-between gap-8">
                 <p class="text-sm font-medium uppercase tracking-wide text-white/60 whitespace-nowrap">
                     {{ t('poweredBy') }}

@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <template>
     <section class="px-6 md:px-16 py-30 pb-32">
-        <div class="glass relative max-w-4xl mx-auto rounded-[40px] p-12 md:p-20 text-center overflow-hidden">
+        <div v-reveal class="glass relative max-w-4xl mx-auto rounded-[40px] p-12 md:p-20 text-center overflow-hidden">
             <div class="absolute inset-0 bg-linear-to-b from-violet-300/10 to-transparent pointer-events-none"></div>
             <div class="relative">
                 <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">{{ t('cta.title') }}</h2>

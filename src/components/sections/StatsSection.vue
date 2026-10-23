@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import CountUp from '../ui/CountUp.vue'
 const { t } = useI18n()
 const stats = [
     { value: '12k+', key: 'teams', color: 'text-violet-300' },
@@ -11,10 +12,10 @@ const stats = [
 
 <template>
     <section class="py-12 px-6 md:px-16">
-        <div class="glass max-w-300 mx-auto rounded-[40px] p-12">
+        <div v-reveal class="glass max-w-300 mx-auto rounded-[40px] p-12">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:divide-x divide-white/10">
                 <div v-for="s in stats" :key="s.key">
-                    <div :class="['text-4xl md:text-5xl font-bold mb-2', s.color]">{{ s.value }}</div>
+                    <div :class="['text-4xl md:text-5xl font-bold mb-2 tabular-nums', s.color]"><CountUp :value="s.value" /></div>
                     <div class="text-xs font-semibold uppercase tracking-widest text-white/60">{{ t(`data.${s.key}`) }}</div>
                 </div>
             </div>

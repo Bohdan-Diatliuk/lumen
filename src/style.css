@@ -23,3 +23,59 @@ body {
   backdrop-filter: blur(6px);
   box-shadow: 2px 8px 32px 0 rgb(0 0 0 / 0.3);
 }
+
+/* Scroll reveal (see directives/reveal.ts). Uses keyframes + `backwards` fill so it
+   doesn't fight utilities that set transform/transition (hover:scale, md:-translate-y-4). */
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  animation: reveal-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+}
+
+/* Chart bars grow from the baseline once their parent is revealed */
+.reveal.is-visible .bar-grow {
+  animation: bar-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(0.3s + var(--i, 0) * 90ms);
+  transform-origin: bottom;
+}
+
+@keyframes bar-grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+/* Connector line in "how it works" draws left to right */
+.reveal.is-visible .line-draw {
+  animation: line-draw 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards;
+  transform-origin: left;
+}
+
+@keyframes line-draw {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+  }
+
+  .reveal.is-visible,
+  .reveal.is-visible .bar-grow,
+  .reveal.is-visible .line-draw {
+    animation: none;
+  }
+}

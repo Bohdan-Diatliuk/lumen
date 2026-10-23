@@ -7,9 +7,9 @@ const initials = (name: string) => name.split(' ').map(w => w[0]).join('')
 
 <template>
     <section class="max-w-300 mx-auto px-6 md:px-16 py-30">
-        <h2 class="text-[2.5rem] font-bold text-white text-center mb-16">{{ t('comments.title') }}</h2>
+        <h2 v-reveal class="text-[2.5rem] font-bold text-white text-center mb-16">{{ t('comments.title') }}</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div v-for="(u, i) in users" :key="u"
+            <div v-for="(u, i) in users" :key="u" v-reveal="i * 120"
                 :class="['glass rounded-3xl p-8 flex flex-col justify-between', i === 1 && 'md:-translate-y-4']">
                 <p class="italic text-gray-300 mb-8">"{{ t(`comments.${u}.comment`) }}"</p>
                 <div class="flex items-center gap-4">
