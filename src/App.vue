@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import Navbar from './layout/Navbar.vue';
 import GlassCircles from './components/ui/GlassCircles.vue';
-import bgImage from './assets/bg/screen.png';
-import bgData from './assets/bg/data.png';
+import bgData from './assets/bg/data.webp';
 import GlassSearch from './components/ui/GlassSearch.vue';
 import DataTeamSection from './components/sections/DataTeamSection.vue';
 import CardSection from './components/sections/CardSection.vue';
@@ -15,12 +15,23 @@ import PricingSection from './components/sections/PricingSection.vue';
 import FaqSection from './components/sections/FaqSection.vue';
 import CtaSection from './components/sections/CtaSection.vue';
 import Footer from './layout/Footer.vue';
+
+const heroImg = ref<HTMLImageElement>();
+const heroLoaded = ref(false);
+
+// A cached image can finish loading before Vue mounts, so @load would never fire
+onMounted(() => {
+  if (heroImg.value?.complete) heroLoaded.value = true;
+});
 </script>
 
 <template>
   <div id="top" class="overflow-hidden">
     <section class="relative min-h-screen">
-      <div class="absolute inset-0 -z-10 bg-cover bg-center" :style="{ backgroundImage: `url(${bgImage})` }">
+      <div class="absolute inset-0 -z-10 bg-[#0a0f1f]"
+        style="background-image: radial-gradient(60% 50% at 0% 100%, rgb(124 92 255 / 0.35), transparent), radial-gradient(60% 50% at 100% 0%, rgb(56 189 248 / 0.3), transparent)">
+        <img ref="heroImg" src="/bg/hero.webp" alt="" fetchpriority="high" decoding="async" @load="heroLoaded = true"
+          :class="['size-full object-cover transition-opacity duration-700', heroLoaded ? 'opacity-100' : 'opacity-0']" />
       </div>
       <div class="absolute bottom-0 left-0 right-0 h-64 -z-10"
         style="background: linear-gradient(to bottom, transparent, #171725)"></div>
@@ -29,7 +40,7 @@ import Footer from './layout/Footer.vue';
     </section>
     <section class="relative min-h-screen flex items-center justify-center px-6"
       :style="{ transform: 'perspective(1200px) rotateX(8deg)' }">
-      <img :src="bgData" alt="data" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
+      <img :src="bgData" alt="data" loading="lazy" decoding="async" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
     </section>
     <GlassSearch />
     <DataTeamSection id="product" />

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import dataScreen from '../../assets/data/screen.png'
+import dataScreen from '../../assets/data/screen.webp'
 const { t } = useI18n()
 </script>
 
@@ -9,7 +9,7 @@ const { t } = useI18n()
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div v-reveal class="relative">
                 <div class="absolute -inset-4 bg-linear-to-br from-indigo-500/20 to-transparent rounded-3xl blur-[100px] z-0"></div>
-                <img :src="dataScreen" alt="Data Team"
+                <img :src="dataScreen" alt="Data Team" loading="lazy" decoding="async"
                     class="relative z-10 w-full object-cover rounded-3xl border border-white/10 shadow-2xl" />
             </div>
             <div v-reveal="150">
