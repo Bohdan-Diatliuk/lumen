@@ -129,6 +129,118 @@ body {
   }
 }
 
+/* "Just ask" live demo (LumenAnswerSection.vue) */
+.anim-up {
+  animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background: currentColor;
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* pathLength=1 on the polyline, so one dash of length 1 draws the whole line */
+.line-trace {
+  stroke-dasharray: 1;
+  animation: line-trace 1.4s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+@keyframes line-trace {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+.line-fill {
+  animation: fade-in 1s ease 0.6s backwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Mascot popup (ui/GlitchPopup.vue): snaps in from the left edge with a small overshoot, snaps back out */
+.glitch-popup.is-hidden {
+  visibility: hidden;
+}
+
+.glitch-popup.is-in {
+  animation: pop-in 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.glitch-popup.is-out {
+  animation: pop-out 0.2s ease-in both;
+}
+
+/* speech bubble pops just after the mascot lands; it rides along when the mascot leaves */
+.glitch-popup:not(.is-hidden) .popup-bubble {
+  transform-origin: bottom left;
+  animation: bubble-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards;
+}
+
+@keyframes bubble-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    transform: translateX(-105%);
+  }
+}
+
+@keyframes pop-out {
+  to {
+    transform: translateX(-105%);
+  }
+}
+
+/* "CLICK ME!!" nudges above the "Just ask" heading: pop in one by one once the block is on screen,
+   then keep bobbing. Outer span pops (transform), inner span bobs, so they don't fight. */
+.click-me {
+  opacity: 0;
+}
+
+.reveal.is-visible .click-me {
+  opacity: 1;
+  animation: click-me-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(0.5s + var(--d, 0s));
+}
+
+.click-me-bob {
+  display: inline-block;
+  animation: click-me-bob 0.9s ease-in-out infinite alternate;
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes click-me-pop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes click-me-bob {
+  to {
+    transform: translateY(-4px);
+  }
+}
+
 /* Floating chips on the "data teams" image: pop in one by one, then keep drifting.
    Two nested elements because both animations use `transform`. */
 .chip-pop {
@@ -329,6 +441,22 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .click-me {
+    opacity: 1;
+  }
+
+  .reveal.is-visible .click-me,
+  .click-me-bob {
+    animation: none;
+  }
+
+  .anim-up,
+  .caret,
+  .line-trace,
+  .line-fill {
+    animation: none;
+  }
+
   /* no auto-scroll: let people scroll the single set by hand */
   .marquee {
     overflow-x: auto;

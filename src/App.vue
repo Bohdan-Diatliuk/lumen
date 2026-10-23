@@ -16,6 +16,7 @@ import PricingSection from './components/sections/PricingSection.vue';
 import FaqSection from './components/sections/FaqSection.vue';
 import CtaSection from './components/sections/CtaSection.vue';
 import Footer from './layout/Footer.vue';
+import GlitchPopup from './components/ui/GlitchPopup.vue';
 
 const { t } = useI18n();
 
@@ -52,7 +53,7 @@ onMounted(() => {
     <GlassSearch />
     <DataTeamSection id="product" />
     <CardSection id="features" />
-    <LumenAnswerSection />
+    <LumenAnswerSection id="answer" />
     <ReportsSection />
     <HowItWorksSection />
     <StatsSection />
@@ -61,5 +62,6 @@ onMounted(() => {
     <FaqSection id="resources" />
     <CtaSection />
     <Footer />
+    <GlitchPopup trigger="#answer .click-zone" src="/mascot.webp" />
   </div>
 </template>
