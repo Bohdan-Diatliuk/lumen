@@ -21,7 +21,7 @@ const ry = 46 // vertical squash: back cards sit higher and smaller, which reads
 const rot = ref(0)
 const idx = ref(0)
 const dragging = ref(false)
-let paused = false
+const paused = ref(false)
 let frame = 0
 let timer = 0
 
@@ -128,7 +128,7 @@ onMounted(() => {
     ro.observe(stage.value!)
     if (!reduceMotion) {
         timer = window.setInterval(() => {
-            if (!paused && !dragging.value) next()
+            if (!paused.value && !dragging.value) next()
         }, 5500)
     }
 })
