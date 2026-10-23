@@ -336,7 +336,21 @@
     "subTitle": "Join 12,000+ teams making faster, smarter decisions with Lumen AI.",
     "placeholder": "Enter your work email",
     "button": "Start Free Trial",
-    "note": "14-day free trial. Cancel anytime."
+    "note": "14-day free trial. Cancel anytime.",
+    "error": "Please enter a valid work email.",
+    "success": "You’re in! Check your inbox to start your trial.",
+    "done": "Done",
+    "joined": "Joined this week",
+    "chips": {
+      "a": "Revenue +12%",
+      "b": "Anomaly detected",
+      "c": "Report sent to #leadership",
+      "d": "Query answered in 3s",
+      "e": "Churn −0.4%",
+      "f": "Dashboard shared",
+      "g": "Warehouse synced",
+      "h": "99.9% uptime"
+    }
   },
   "pricingExtra": {
     "popular": "MOST POPULAR",
@@ -366,10 +380,14 @@
     "subscribe": "Subscribe",
     "subscribeText": "Get the latest news and updates delivered to your inbox.",
     "email": "Email address",
-    "rights": "© 2024 Lumen AI. All rights reserved.",
+    "rights": "© {year} Lumen AI. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "cookies": "Cookie Settings"
+    "cookies": "Cookie Settings",
+    "status": "All systems operational",
+    "top": "Back to top",
+    "error": "Enter a valid email.",
+    "subscribed": "Subscribed! Welcome aboard."
   },
   "preview": {
     "left": "Ask anything",
