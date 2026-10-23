@@ -16,35 +16,81 @@
   "dataTeam": {
     "title": "Data teams are drowning in dashboards nobody reads",
     "mainText": "You spend hours building complex dashboards, only for stakeholders to ask the same ad-hoc questions on Slack. The backlog grows, insights are delayed, and valuable data engineers are stuck doing repetitive reporting tasks instead of strategic work.",
-    "footerText": "It's time for a fundamental shift in how organizations interact with their data."
+    "footerText": "It's time for a fundamental shift in how organizations interact with their data.",
+    "chips": {
+      "question": "Can you pull last week's revenue?",
+      "backlog": "Backlog",
+      "requests": "requests",
+      "views": "Dashboard views",
+      "viewsValue": "0 this week"
+    }
   },
   "cards": {
     "title": "Everything you need to move faster",
     "subTitle": "A complete toolkit for the modern data-driven enterprise.",
     "language": {
       "title": "Natural Language Queries",
-      "description": "Ask complex business questions in plain English and get instant, accurate charts and insights."
+      "description": "Ask complex business questions in plain English and get instant, accurate charts and insights.",
+      "tag": "AI Chat",
+      "p1": "No SQL or dashboards needed",
+      "p2": "Follow-up questions keep context",
+      "p3": "Charts you can share in one click",
+      "more": "Lumen understands your schema, metrics and business vocabulary. Ask in plain language, refine with follow-ups, and get a chart together with the query it ran behind the scenes.",
+      "example": "Which region grew fastest last quarter, and why?"
     },
     "reports": {
       "title": "Auto-Generated Reports",
-      "description": "Schedule comprehensive performance reports that write themselves and deliver straight to Slack."
+      "description": "Schedule comprehensive performance reports that write themselves and deliver straight to Slack.",
+      "tag": "Reports",
+      "p1": "Daily, weekly or monthly schedules",
+      "p2": "Delivered to Slack and email",
+      "p3": "Always written in your team's tone",
+      "more": "Describe a report once and Lumen builds it: it pulls the data, writes the narrative, highlights what changed and posts it where your team already works.",
+      "example": "Every Monday at 9:00 — weekly revenue summary to #leadership"
     },
     "anomaly": {
       "title": "Anomaly Detection",
-      "description": "AI automatically flags statistically significant deviations in your KPIs before you even ask."
+      "description": "AI automatically flags statistically significant deviations in your KPIs before you even ask.",
+      "tag": "Monitoring",
+      "p1": "Learns your seasonality",
+      "p2": "Alerts only when it truly matters",
+      "p3": "Explains the likely root cause",
+      "more": "Lumen watches your metrics around the clock, compares them with your seasonal baseline and only pings you when a change is statistically significant.",
+      "example": "Signups dropped 18% in EMEA — likely caused by Tuesday's checkout release."
     },
     "integrations": {
       "title": "50+ Integrations",
-      "description": "Connect securely to Snowflake, BigQuery, PostgreSQL, Salesforce, and all your critical data sources."
+      "description": "Connect securely to Snowflake, BigQuery, PostgreSQL, Salesforce, and all your critical data sources.",
+      "tag": "Connectors",
+      "p1": "Warehouses, CRMs and databases",
+      "p2": "Set up in minutes, no engineers",
+      "p3": "Read-only access by default",
+      "more": "Native connectors for warehouses, databases, CRMs and BI tools. Authenticate once, pick the tables you want to expose and Lumen maps the schema for you.",
+      "example": "Snowflake + Salesforce + Stripe, joined in a single question."
     },
     "sync": {
       "title": "Real-Time Sync",
-      "description": "Your AI agent always has the latest context. No stale data, no delayed insights."
+      "description": "Your AI agent always has the latest context. No stale data, no delayed insights.",
+      "tag": "Live data",
+      "p1": "Updates as your data changes",
+      "p2": "No manual refreshes or exports",
+      "p3": "One source of truth for everyone",
+      "more": "Lumen queries your sources live instead of copying them, so answers always reflect the current state of the business — no nightly jobs, no stale snapshots.",
+      "example": "Revenue today, as of 2 minutes ago."
     },
     "security": {
       "title": "Enterprise Security",
-      "description": "SOC2 compliant, row-level security, and strict data governance policies built-in by default."
-    }
+      "description": "SOC2 compliant, row-level security, and strict data governance policies built-in by default.",
+      "tag": "Security",
+      "p1": "SOC2 Type II certified",
+      "p2": "Row-level and column-level access",
+      "p3": "Full audit log of every question",
+      "more": "Lumen respects the permissions you already have. Every query runs with the asker's access level, is logged for audit, and your data is never used to train models.",
+      "example": "A sales rep only sees the numbers for their own region."
+    },
+    "learnMore": "Learn more",
+    "back": "Back",
+    "exampleLabel": "Example"
   },
   "lumenAnswer": {
     "title": "Just ask. Lumen answers.",
