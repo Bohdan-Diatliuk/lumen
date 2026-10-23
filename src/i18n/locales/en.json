@@ -224,6 +224,10 @@
     "terms": "Terms of Service",
     "cookies": "Cookie Settings"
   },
+  "preview": {
+    "left": "Ask anything",
+    "right": "Get answers"
+  },
   "poweredBy": "Powering data decisions at",
   "mock": {
     "question": "Show revenue by region for Q3",

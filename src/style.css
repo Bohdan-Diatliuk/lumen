@@ -68,7 +68,186 @@ body {
   }
 }
 
+/* Hover border that starts at the top centre and traces both ways around the element.
+   A conic-gradient sweep is masked down to a ring; --sweep is animated via @property. */
+@property --sweep {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.trace-border {
+  position: relative;
+}
+
+.trace-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 10px; /* ring thickness: matches the 10px frame on the image */
+  border-radius: inherit;
+  /* two halves grow from the top centre: one clockwise (0 -> sweep/2), one counter-clockwise */
+  background: conic-gradient(
+    from 0deg,
+    var(--color-violet-300) 0deg,
+    var(--color-sky-300) calc(var(--sweep) / 4),
+    var(--color-violet-300) calc(var(--sweep) / 2),
+    transparent calc(var(--sweep) / 2),
+    transparent calc(360deg - var(--sweep) / 2),
+    var(--color-violet-300) calc(360deg - var(--sweep) / 2),
+    var(--color-sky-300) calc(360deg - var(--sweep) / 4),
+    var(--color-violet-300) 360deg
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  z-index: 20;
+  pointer-events: none;
+  transition: --sweep 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.trace-border:hover::before {
+  --sweep: 360deg;
+}
+
+/* Vertical uppercase labels that slide out sideways from behind the image (z-0 vs the image's z-10).
+   Hidden below lg: there is no room beside the image on narrow screens. */
+.trace-side {
+  display: none;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 0;
+  writing-mode: vertical-rl;
+  font-size: 1.3125rem; /* 0.875rem * 1.5 */
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgb(255 255 255 / 0.7);
+  opacity: 0;
+  pointer-events: none;
+  /* fade out fast on leave: the image is 90% opaque, so a label sliding under it would show through */
+  transition: opacity 0.15s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 64rem) {
+  .trace-side {
+    display: block;
+  }
+}
+
+/* Start tucked behind the image. `rotate` is applied before `transform`, so the rotated
+   left label needs the same -4rem to end up shifted toward the image (visually to the right) */
+.trace-side-left {
+  right: 100%;
+  margin-right: 1.5rem;
+  rotate: 180deg; /* reads bottom-to-top */
+  transform: translateX(-4rem);
+}
+
+.trace-side-right {
+  left: 100%;
+  margin-left: 1.5rem;
+  transform: translateX(-4rem);
+}
+
+.trace-border:hover .trace-side {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease 0.1s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* "Powered by" icons: each one gets its own idle motion (GlassSearch.vue).
+   Keyframes use `transform` so hover:scale (the `scale` property) can stack on top. */
+.icon-spin {
+  animation: icon-spin 16s linear infinite;
+}
+
+.icon-sway {
+  animation: icon-sway 4s ease-in-out infinite;
+  transform-origin: 50% 90%;
+}
+
+.icon-bob {
+  animation: icon-bob 2.6s ease-in-out infinite;
+}
+
+.icon-flicker {
+  animation: icon-flicker 1.8s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+.icon-drift {
+  animation: icon-drift 3.4s ease-in-out infinite;
+}
+
+.icon-spin:hover {
+  animation-duration: 3s;
+}
+
+@keyframes icon-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon-sway {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes icon-bob {
+  0%, 100% {
+    transform: translateY(-3px) scaleY(1.04);
+  }
+  50% {
+    transform: translateY(3px) scaleY(0.96);
+  }
+}
+
+@keyframes icon-flicker {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.07, 0.95) rotate(-3deg);
+  }
+  50% {
+    transform: scale(0.96, 1.06) rotate(2deg);
+  }
+  75% {
+    transform: scale(1.05, 0.97) rotate(-2deg);
+  }
+}
+
+@keyframes icon-drift {
+  0%, 100% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .trace-border::before,
+  .trace-side {
+    transition: none;
+  }
+
+  .icon-spin,
+  .icon-sway,
+  .icon-bob,
+  .icon-flicker,
+  .icon-drift {
+    animation: none;
+  }
+
   .reveal {
     opacity: 1;
   }

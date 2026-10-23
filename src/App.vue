@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Navbar from './layout/Navbar.vue';
 import GlassCircles from './components/ui/GlassCircles.vue';
 import bgData from './assets/bg/data.webp';
@@ -15,6 +16,8 @@ import PricingSection from './components/sections/PricingSection.vue';
 import FaqSection from './components/sections/FaqSection.vue';
 import CtaSection from './components/sections/CtaSection.vue';
 import Footer from './layout/Footer.vue';
+
+const { t } = useI18n();
 
 const heroImg = ref<HTMLImageElement>();
 const heroLoaded = ref(false);
@@ -40,7 +43,11 @@ onMounted(() => {
     </section>
     <section class="relative min-h-screen flex items-center justify-center px-6"
       :style="{ transform: 'perspective(1200px) rotateX(8deg)' }">
-      <img :src="bgData" alt="data" loading="lazy" decoding="async" class="w-full max-w-6xl h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
+      <div class="trace-border w-full max-w-6xl rounded-2xl">
+        <img :src="bgData" alt="data" loading="lazy" decoding="async" class="relative z-10 w-full h-auto border-10 border-white/10 opacity-90 rounded-2xl" />
+        <span class="trace-side trace-side-left">{{ t('preview.left') }}</span>
+        <span class="trace-side trace-side-right">{{ t('preview.right') }}</span>
+      </div>
     </section>
     <GlassSearch />
     <DataTeamSection id="product" />

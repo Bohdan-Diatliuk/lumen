@@ -2,6 +2,14 @@
 import { useI18n } from 'vue-i18n';
 import { Snowflake, Leaf, Droplet, Flame, Wind } from '@lucide/vue';
 const { t } = useI18n();
+
+const icons = [
+    { icon: Snowflake, anim: 'icon-spin', hover: 'hover:text-sky-300' },
+    { icon: Leaf, anim: 'icon-sway', hover: 'hover:text-violet-300' },
+    { icon: Droplet, anim: 'icon-bob', hover: 'hover:text-sky-300' },
+    { icon: Flame, anim: 'icon-flicker', hover: 'hover:text-pink-400' },
+    { icon: Wind, anim: 'icon-drift', hover: 'hover:text-violet-300' },
+];
 </script>
 
 <template>
@@ -12,12 +20,9 @@ const { t } = useI18n();
                 <p class="text-sm font-medium uppercase tracking-wide text-white/60 whitespace-nowrap">
                     {{ t('poweredBy') }}
                 </p>
-                <div class="flex flex-wrap justify-center md:justify-end items-center gap-12 w-full opacity-60 grayscale">
-                    <Snowflake class="w-9 h-9" />
-                    <Leaf class="w-9 h-9" />
-                    <Droplet class="w-9 h-9" />
-                    <Flame class="w-9 h-9" />
-                    <Wind class="w-9 h-9" />
+                <div class="flex flex-wrap justify-center md:justify-end items-center gap-12 w-full">
+                    <component v-for="i in icons" :key="i.anim" :is="i.icon"
+                        :class="['w-9 h-9 text-white/50 cursor-pointer transition-[color,scale] duration-300 hover:scale-125', i.anim, i.hover]" />
                 </div>
             </div>
         </div>
