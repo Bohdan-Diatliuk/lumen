@@ -2,6 +2,7 @@
 import { onBeforeUnmount, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ArrowRight, ArrowUp, Check, Send } from '@lucide/vue'
+import LumenLogo from '../components/ui/LumenLogo.vue'
 const { t } = useI18n()
 const columns = [
     { title: 'product', links: ['features', 'integrations', 'pricing', 'changelog'] },
@@ -43,38 +44,36 @@ const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
         <!-- top edge: a hairline with a light that travels along it -->
         <div class="edge absolute inset-x-0 top-0 h-px bg-white/10"></div>
 
-        <div class="max-w-300 mx-auto px-6 md:px-16 pt-16">
-            <div v-reveal class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-2 md:col-span-1">
-                    <div class="mb-4 flex items-center gap-2 text-xl font-bold text-white">
-                        <span class="h-6 w-6 rounded-lg bg-linear-to-br from-violet-300 to-sky-300"></span> Lumen
-                    </div>
-                    <p class="text-gray-300">{{ t('footer.tagline') }}</p>
+        <div class="max-w-300 mx-auto px-6 md:px-16 pt-6 md:pt-16">
+            <div v-reveal class="flex flex-wrap items-center gap-x-5 gap-y-3 mb-4 md:grid md:grid-cols-4 md:items-start md:gap-12 md:mb-12">
+                <div class="w-full md:w-auto flex items-center justify-between md:block">
+                    <LumenLogo class="md:mb-4" />
+                    <p class="hidden md:block text-gray-300">{{ t('footer.tagline') }}</p>
 
-                    <div class="mt-6 flex gap-3">
+                    <div class="md:mt-6 flex gap-2 md:gap-3">
                         <a v-for="s in socials" :key="s.name" href="#" :aria-label="s.name" class="social flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/60">
                             <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path :d="s.path" /></svg>
                         </a>
                     </div>
 
-                    <div class="mt-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
+                    <div class="hidden md:inline-flex mt-6 items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
                         <span class="live relative h-2 w-2 rounded-full bg-emerald-300"></span> {{ t('footer.status') }}
                     </div>
                 </div>
 
-                <div v-for="col in columns" :key="col.title">
-                    <div class="text-xs font-semibold uppercase tracking-widest text-white mb-6">{{ t(`footer.${col.title}`) }}</div>
-                    <div class="flex flex-col gap-4">
-                        <a v-for="l in col.links" :key="l" href="#" class="flink group inline-flex w-fit items-center gap-1 text-gray-300 hover:text-violet-300">
+                <div v-for="col in columns" :key="col.title" class="max-md:contents">
+                    <div class="hidden md:block text-xs font-semibold uppercase tracking-widest text-white mb-6">{{ t(`footer.${col.title}`) }}</div>
+                    <div class="max-md:contents flex flex-col gap-4">
+                        <a v-for="l in col.links" :key="l" href="#" class="flink group inline-flex w-fit items-center gap-1 text-sm md:text-base text-gray-300 hover:text-violet-300">
                             <span class="flink-text">{{ t(`footer.${l}`) }}</span>
-                            <ArrowRight class="flink-arrow h-3.5 w-3.5" />
+                            <ArrowRight class="flink-arrow hidden md:block h-3.5 w-3.5" />
                         </a>
                     </div>
                 </div>
 
-                <div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-white mb-6">{{ t('footer.subscribe') }}</div>
-                    <p class="text-sm text-gray-300 mb-4">{{ t('footer.subscribeText') }}</p>
+                <div class="w-full md:w-auto">
+                    <div class="hidden md:block text-xs font-semibold uppercase tracking-widest text-white mb-6">{{ t('footer.subscribe') }}</div>
+                    <p class="hidden md:block text-sm text-gray-300 mb-4">{{ t('footer.subscribeText') }}</p>
                     <form class="flex gap-2" novalidate @submit.prevent="subscribe">
                         <input
                             v-model="email"
@@ -91,18 +90,18 @@ const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
                             <Send v-else class="send-icon w-4 h-4" />
                         </button>
                     </form>
-                    <p class="mt-2 h-4 text-xs" :class="state === 'done' ? 'text-emerald-300' : 'text-rose-300'">
+                    <p class="mt-2 h-4 text-xs" :class="[state === 'done' ? 'text-emerald-300' : 'text-rose-300', state === 'idle' && !error && 'max-md:hidden']">
                         <template v-if="state === 'done'">{{ t('footer.subscribed') }}</template>
                         <template v-else-if="error">{{ t('footer.error') }}</template>
                     </p>
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+            <div class="border-t border-white/10 pt-4 md:pt-8 pb-4 md:pb-0 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 text-xs md:text-sm text-gray-300">
                 <p>{{ t('footer.rights', { year }) }}</p>
-                <div class="flex items-center gap-6">
+                <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 md:gap-6">
                     <a v-for="l in legal" :key="l" href="#" class="hover:text-violet-300 transition-colors">{{ t(`footer.${l}`) }}</a>
-                    <button type="button" class="top inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 py-1.5 pl-3 pr-2 text-xs text-white/70 hover:text-white" @click="toTop">
+                    <button type="button" class="top hidden md:inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 py-1.5 pl-3 pr-2 text-xs text-white/70 hover:text-white" @click="toTop">
                         {{ t('footer.top') }}
                         <span class="flex h-6 w-6 items-center justify-center rounded-full bg-violet-300/20 text-violet-300"><ArrowUp class="top-arrow h-3.5 w-3.5" /></span>
                     </button>
@@ -111,7 +110,7 @@ const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
         </div>
 
         <!-- oversized wordmark, cropped by the bottom edge -->
-        <div class="mark pointer-events-none select-none text-center font-bold leading-[0.8] text-[min(24vw,17rem)] -mb-[0.12em] pt-6" aria-hidden="true">Lumen</div>
+        <div class="mark hidden md:block pointer-events-none select-none text-center font-bold leading-[0.8] text-[min(20vw,17rem)] -mb-[0.12em] pt-3 md:pt-6" aria-hidden="true">Lumen</div>
     </footer>
 </template>
 
