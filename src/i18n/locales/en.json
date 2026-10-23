@@ -177,31 +177,51 @@
       "fullName": "Sarah Jenkins",
       "position": "VP of Operations",
       "company": "TechCorp",
-      "comment": "Lumen has completely changed how our executive team operates. We no longer wait until Monday for reports; we just ask Lumen on Friday afternoon and get answers instantly."
+      "comment": "Lumen has completely changed how our executive team operates. We no longer wait until Monday for reports; we just ask Lumen on Friday afternoon and get answers instantly.",
+      "metric": "3x",
+      "metricLabel": "faster executive reporting"
     },
     "user2": {
       "fullName": "Marcus Chen",
       "position": "Lead Data Engineer",
       "company": "ScaleUp",
-      "comment": "As a data engineer, I used to spend 60% of my week pulling ad-hoc CSVs. Now, stakeholders self-serve through Lumen, and I can focus on building our core infrastructure."
+      "comment": "As a data engineer, I used to spend 60% of my week pulling ad-hoc CSVs. Now, stakeholders self-serve through Lumen, and I can focus on building our core infrastructure.",
+      "metric": "60%",
+      "metricLabel": "less time on ad-hoc requests"
     },
     "user3": {
       "fullName": "David Alpert",
       "position": "Head of Growth",
       "company": "FinStream",
-      "comment": "The automated anomaly detection caught a billing issue a week before our standard reporting would have noticed it. It practically paid for itself in one day."
+      "comment": "The automated anomaly detection caught a billing issue a week before our standard reporting would have noticed it. It practically paid for itself in one day.",
+      "metric": "7d",
+      "metricLabel": "earlier issue detection"
     },
     "user4": {
-      "fullName": "",
-      "position": "",
-      "company": "",
-      "comment": ""
+      "fullName": "Priya Natarajan",
+      "position": "Director of Analytics",
+      "company": "Northwind Labs",
+      "comment": "Our board deck used to take two analysts three days. Lumen drafts it overnight and the team just reviews the story it tells.",
+      "metric": "4x",
+      "metricLabel": "faster board prep"
     },
     "user5": {
-      "fullName": "",
-      "position": "",
-      "company": "",
-      "comment": ""
+      "fullName": "Tomás Rivera",
+      "position": "COO",
+      "company": "Brightpath",
+      "comment": "I stopped asking for dashboards. I ask a question in Slack, get a chart and the SQL behind it, and make the call in the same meeting.",
+      "metric": "15h",
+      "metricLabel": "saved every week"
+    },
+    "rating": "4.9",
+    "ratingLabel": "average rating from 1,200+ reviews",
+    "user6": {
+      "fullName": "Elena Kowalska",
+      "position": "Senior Product Analyst",
+      "company": "Orbital",
+      "comment": "Setup took an afternoon. Within a week, most of our ad-hoc requests were answered by Lumen before they ever reached my queue.",
+      "metric": "90%",
+      "metricLabel": "fewer ad-hoc requests"
     }
   },
   "price": {
@@ -272,8 +292,44 @@
       {
         "q": "Is there a free trial?",
         "a": "Yes, we offer a 14-day free trial on our Pro plan with no credit card required. You can connect your data and start getting insights immediately."
+      },
+      {
+        "q": "Can I export reports and charts?",
+        "a": "Yes. Export any chart as PNG or SVG and any report as PDF or CSV, or share a live link that stays in sync with your data."
+      },
+      {
+        "q": "Do you offer role-based access control?",
+        "a": "Yes. Define who can see which tables, columns and metrics. Permissions follow your warehouse roles and SSO groups."
+      },
+      {
+        "q": "How accurate are the answers?",
+        "a": "Every answer shows the SQL and the source tables behind it, so you can verify it in one click. You can also certify trusted metrics so Lumen always uses your official definition."
+      },
+      {
+        "q": "Can I change or cancel my plan at any time?",
+        "a": "Yes. Upgrade, downgrade or cancel from your billing settings whenever you like. Yearly plans are refunded pro rata within the first 30 days."
+      },
+      {
+        "q": "Do you have an API?",
+        "a": "Yes. A REST API and SDKs let you ask questions, fetch results and trigger reports from your own apps and internal tools."
       }
-    ]
+    ],
+    "search": "Search questions…",
+    "cats": {
+      "all": "All",
+      "security": "Security",
+      "data": "Data",
+      "product": "Product",
+      "pricing": "Pricing"
+    },
+    "empty": "No questions match your search.",
+    "helpful": "Was this helpful?",
+    "thanks": "Thanks for the feedback!",
+    "still": {
+      "title": "Still have questions?",
+      "text": "Our team usually replies within a few hours.",
+      "btn": "Talk to us"
+    }
   },
   "cta": {
     "title": "Ready to see your data clearly?",
@@ -285,7 +341,15 @@
   "pricingExtra": {
     "popular": "MOST POPULAR",
     "start": "Start Free Trial",
-    "contact": "Contact Sales"
+    "contact": "Contact Sales",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save 20%",
+    "billedYearly": "billed yearly",
+    "billedMonthly": "billed monthly",
+    "trust1": "14-day free trial",
+    "trust2": "No credit card required",
+    "trust3": "Cancel anytime"
   },
   "footer": {
     "tagline": "AI-driven analytics that move as fast as your business.",
