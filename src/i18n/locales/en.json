@@ -106,26 +106,58 @@
     "title": "Reports that write themselves",
     "description": "Stop manually compiling weekly updates. Lumen analyzes your metrics, writes executive summaries, and delivers comprehensive reports directly to your team's Slack channels.",
     "text": "Keep everyone aligned without lifting a finger, ensuring stakeholders always have the context they need to make decisions.",
-    "btn": "Explore Integrations"
+    "btn": "Explore Integrations",
+    "schedule": "Every Monday · 9:00",
+    "writing": "Lumen is writing",
+    "revenue": "Revenue",
+    "users": "Active users",
+    "churn": "Churn",
+    "summary": "Revenue is up 12% week over week, led by EMEA. Churn dipped to 2.1%, the lowest this quarter.",
+    "delivered": "Delivered to #leadership",
+    "chips": {
+      "schedule": "Daily, weekly or monthly",
+      "channels": "Slack and email",
+      "tone": "Your team's tone"
+    }
   },
   "howItWorks": {
     "title": "How it works",
     "table": {
       "firstColumn": {
         "title": "Connect",
-        "description": "Securely hook up your data warehouse in minutes."
+        "description": "Securely hook up your data warehouse in minutes.",
+        "points": [
+          "Snowflake, BigQuery, Postgres and 50+ more",
+          "Read-only access, encrypted end to end",
+          "Live in under 5 minutes"
+        ]
       },
       "secondColumn": {
         "title": "Analyze",
-        "description": "Lumen learns your schema and business logic automatically."
+        "description": "Lumen learns your schema and business logic automatically.",
+        "points": [
+          "Maps tables, joins and relationships",
+          "Learns your metric definitions",
+          "Understands your business vocabulary"
+        ]
       },
       "thirdColumn": {
         "title": "Discover",
-        "description": "Ask questions naturally and get instant visualizations."
+        "description": "Ask questions naturally and get instant visualizations.",
+        "points": [
+          "Ask in plain English, get charts back",
+          "Every answer shows the SQL behind it",
+          "Follow-up questions keep context"
+        ]
       },
       "fourthColumn": {
         "title": "Act",
-        "description": "Make confident decisions based on real-time insights."
+        "description": "Make confident decisions based on real-time insights.",
+        "points": [
+          "Schedule reports to Slack and email",
+          "Get alerted when a KPI moves",
+          "Share live dashboards with your team"
+        ]
       }
     }
   },
@@ -133,7 +165,11 @@
     "teams": "Teams",
     "answer": "Queries Answered",
     "save": "Saved Per Week",
-    "sla": "Uptime SLA"
+    "sla": "Uptime SLA",
+    "teamsHint": "From startups to Fortune 500",
+    "answerHint": "Median answer time: 3 seconds",
+    "saveHint": "Per analyst, vs. manual reporting",
+    "slaHint": "Last 12 months, zero major incidents"
   },
   "comments": {
     "title": "Don't just take our word for it",
